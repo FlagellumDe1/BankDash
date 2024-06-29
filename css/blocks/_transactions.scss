@@ -1,0 +1,64 @@
+.transactions{
+    &__body{
+        padding: min(25px, 1.7361vw);
+        width: 24.3056vw;
+        max-width: 350px;
+    }
+
+    &__item{
+        display: flex;
+        gap: 1em;
+        margin-bottom: 10px;
+        align-items: center;
+        position: relative;
+    }
+
+    &__type{
+        padding: min(14px, 1vw);
+        border-radius: 50%;
+        box-sizing: content-box;
+        width: min(25px, 1.7361vw);
+
+        &-myself{
+            background: #FFF5D9;
+        }
+
+        &-paypal{
+            background: #E7EDFF;
+        }
+
+        &-3rdperson{
+            background: #DCFAF8;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+
+        .transactions__sender{
+            font-size: min(16px, 1.1111vw);
+            font-weight: 600;
+        }
+
+        time{
+            color: var(--color-gray-icons);
+            font-size: min(15px, 1.0417vw);
+        }
+    }
+
+    &__amount{
+        font-size: min(16px, 1.1111vw);
+        position: absolute;
+        right: 0px;
+
+        &-negative{
+            color: var(--color-red);
+        }
+
+        &-positive{
+            color: var(--color-green);
+        }
+    }
+}

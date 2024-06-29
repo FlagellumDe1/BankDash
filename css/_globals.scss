@@ -16,14 +16,27 @@
 body{
     font-family: "Inter", sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: min(1.1111,16px);
     background-color: var(--color-gray);
     color: var(--color-dark-blue);
 }
 
 main{
-   margin-left: 17.3vw;
-    padding-inline:2.7778vw;
+    margin-left: min(250px, 17.3vw);
+    padding:1.6667vw 2.7778vw;
+
+    @include desktop-L {
+        padding: 24px 40px;
+    }
+    
+    .main__wrapper{
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        max-width: 1440px;
+        gap: 2.0833vw;
+        justify-content: center;
+    }
 }
 
 .container{

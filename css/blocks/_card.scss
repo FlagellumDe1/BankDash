@@ -1,0 +1,94 @@
+.card{
+    padding: 1.7361vw 1.7361vw 1.5278vw 1.7361vw;
+    width: 24.3056vw;
+    max-width: 350px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4306vw;
+    border-radius: 1.7361vw;
+    font-size: 0.8333vw;
+    text-transform: capitalize;
+    user-select: none;
+
+    @include desktop-L {
+        padding: 25px 25px 22px 25px;
+        row-gap: 35px;
+        border-radius: 25px;
+        font-size: 12px;
+    }
+
+    &:nth-child(odd){
+        background: var(--color-blue);
+        color: rgba(255, 255, 255, 0.7);
+
+         .card__balance, .card__cardholder, .card__valid, .card__number{
+            color: white;
+         }
+
+    }
+
+    &:nth-child(even){
+            background: white;
+            color: var(--color-gray-alternate);
+    
+            .card__balance,
+                .card__cardholder,
+                .card__valid,
+                .card__number {
+                    color: var(--color-dark-blue);
+            }
+        }
+
+    &__info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:min(4.6528vw, 67px) ;
+        row-gap: min(33px, 2.2917vw);
+    }
+
+    &__balance{
+        display: flex;
+        flex-direction: column;
+       &-wrapper{
+        grid-column-start: 1;
+            grid-column-end: 3;
+        } 
+        font-weight: 600;
+        font-size: min(20px, 1.3889vw);
+    }
+
+    &__cardholder{
+        display: flex;
+        flex-direction: column;
+            font-weight: 600;
+            font-size: min(15px, 1.0417vw);
+    }
+
+    &__valid{
+        display: flex;
+        flex-direction: column;
+            font-weight: 600;
+            font-size: min(15px, 1.0417vw);
+    }
+
+    &__number{
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        font-size: min(22px, 1.5278vw);
+        font-weight: 500;
+
+        display: flex;
+        column-gap: min(10px, 0.6944vw);
+    }
+
+    &__company{
+        width: 3.0556vw;
+        max-width: 44px;
+    }
+}

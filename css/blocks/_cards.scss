@@ -1,0 +1,17 @@
+.cards{
+    &__button{
+        font-weight: 700;
+        padding: min(5px, 0.3472vw) ;
+        font-size: min(17px, 1.1806vw);
+        transition: 0.3s;
+
+        @include hover{
+            color: var(--color-yellow);
+        }
+    }
+
+    &__body{
+        display: flex;
+        column-gap: 2.0833vw;
+    }
+}

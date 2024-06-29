@@ -2,11 +2,21 @@
     position: fixed;
     background: white;
     width: 17.3vw;
+    max-width: 250px;
     height: 100vh;
     
     &__logo{
         padding: 2.15vw 2.0139vw 2.2917vw 2.6389vw;
         display: block;
+
+        img{
+            width: 12.7083vw;
+            max-width: 182px;
+        }
+
+        @include desktop-L{
+            padding: 30px 29px 33px 38px;
+        }
     }
 
     &__nav-button{
@@ -23,8 +33,15 @@
         text-transform: capitalize;
         transition: 0.3s;
 
+        @include desktop-L {
+            column-gap: 26px;
+            padding: 19px 0px 19px 43px;
+            font-size: 18px;
+        }
+
         svg{
-            width:1.7361vw ;
+            width:1.7361vw;
+            max-width: 25px;
             aspect-ratio: 1;
             flex-shrink: 0;
             path{
@@ -46,10 +63,14 @@
                 background: var(--color-blue);
                 height: 100%;
                 width: 0.4167vw;
+                max-width: 6px;
                 position: absolute;
                 left: 0px;
                 border-radius: 0 0.6944vw 0.6944vw 0;
 
+                @include desktop-L {
+                    border-radius: 0 10px 10px 0;
+                }
             }
         }
 
