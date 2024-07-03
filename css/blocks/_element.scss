@@ -4,6 +4,7 @@
     justify-content: space-between;
     height: min(19.5833vw, 282px);
     margin-bottom: 24px;
+    gap: min(20px, 1.3889vw);
 
     &_wide{
         width: 50.6944vw;
@@ -23,11 +24,14 @@
     &__body{
         background: white;
         border-radius: min(1.7361vw, 25px);
-        height: min(16.3194vw, 235px);
         overflow-y: hidden;
 
         &_transparent{
             background: inherit;
         }
+    }
+
+    &__chart{
+        min-height: 261px;
     }
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>BankDash</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <aside class="navigation">
@@ -301,20 +302,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="card__number-wrapper hidden">
-                            <span class="card__number">
-                                <span>
-                                    3778
-                                </span>
-                                <span>
-                                    2447
-                                </span>
-                                <span>
-                                    6785
-                                </span>
-                                <span>
-                                    1234
-                                </span>
+                        <div class="card__number-wrapper ">
+                            <span class="card__number hidden">
+                                3511675633995784
                             </span>
                             <img src="./media/icons/mastercard-icon.svg" alt="cards__company" class="card__company">
                         </div>
@@ -340,21 +330,8 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="card__number-wrapper hidden">
-                            <span class="card__number">
-                                <span>
-                                    3778
-                                </span>
-                                <span>
-                                    2447
-                                </span>
-                                <span>
-                                    6785
-                                </span>
-                                <span>
-                                    1234
-                                </span>
-                            </span>
+                        <div class="card__number-wrapper ">
+                           <span class="card__number hidden">3778244767851234</span>
                             <img src="./media/icons/mastercard-dark.svg" alt="cards__company" class="card__company">
                         </div>
                     </div>
@@ -409,7 +386,24 @@
                     </ul>
                 </div>
             </section>
+            <section class="activity element element_wide">
+                <div class="activity__header element__header">
+                    <h2 class="cards__title element__title">
+                        Weekly activity
+                    </h2>
+                </div>
+                <div class="activity__body element__body element__chart">
+                    <canvas class="activity__chart-container" id="activityChart"></canvas>
+                </div>
+            </section>
         </div>
     </main>
+
+
+
+   
 </body>
+
+<script src="./js/charts.js"></script>
+<script src="./js/card-masker.js"></script>
 </html>

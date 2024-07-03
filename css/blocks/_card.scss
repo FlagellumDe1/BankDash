@@ -10,6 +10,16 @@
     font-size: 0.8333vw;
     text-transform: capitalize;
     user-select: none;
+    position: relative;
+    &::after{
+        content: '';
+        width: min(35px, 2.4306vw);
+        aspect-ratio: 1;
+        position: absolute;
+        top: min(25px, 1.7361vw);
+        right: min(25px, 1.7361vw);
+
+    }
 
     @include desktop-L {
         padding: 25px 25px 22px 25px;
@@ -26,11 +36,24 @@
             color: white;
          }
 
+                 &::after {
+                    background: url('../media/icons/card-chip-lite.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                 }
+
+        .card__number{
+            &-wrapper{
+                background: linear-gradient(to right, hsl(0, 0%, 15%), transparent);
+            }
+        }
+
     }
 
     &:nth-child(even){
             background: white;
             color: var(--color-gray-alternate);
+            border: 1px solid #DFEAF2;
     
             .card__balance,
                 .card__cardholder,
@@ -38,6 +61,18 @@
                 .card__number {
                     color: var(--color-dark-blue);
             }
+
+             &::after {
+                    background: url('../media/icons/card-chip-dark.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            
+            .card__number{
+            &-wrapper{
+                border-top: 1px solid #DFEAF2;
+            }
+        }
         }
 
     &__info{
@@ -78,6 +113,14 @@
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
+            background: transparent;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-block:min(20px, 1.3889vw);
+            padding-inline: min(15px, 1.0417vw);
+            width: 100%;
+            border-radius: 0px 0px min(25px, 1.7361vw) min(25px, 1.7361vw);
         }
 
         font-size: min(22px, 1.5278vw);

@@ -303,6 +303,7 @@ input::placeholder {
   justify-content: space-between;
   height: min(19.5833vw, 282px);
   margin-bottom: 24px;
+  gap: min(20px, 1.3889vw);
 }
 .element_wide {
   width: 50.6944vw;
@@ -319,11 +320,13 @@ input::placeholder {
 .element__body {
   background: white;
   border-radius: min(1.7361vw, 25px);
-  height: min(16.3194vw, 235px);
   overflow-y: hidden;
 }
 .element__body_transparent {
   background: inherit;
+}
+.element__chart {
+  min-height: 261px;
 }
 
 .card {
@@ -340,6 +343,15 @@ input::placeholder {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  position: relative;
+}
+.card::after {
+  content: "";
+  width: min(35px, 2.4306vw);
+  aspect-ratio: 1;
+  position: absolute;
+  top: min(25px, 1.7361vw);
+  right: min(25px, 1.7361vw);
 }
 @media (min-width: 1441px) {
   .card {
@@ -356,15 +368,32 @@ input::placeholder {
 .card:nth-child(odd) .card__balance, .card:nth-child(odd) .card__cardholder, .card:nth-child(odd) .card__valid, .card:nth-child(odd) .card__number {
   color: white;
 }
+.card:nth-child(odd)::after {
+  background: url("../media/icons/card-chip-lite.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card:nth-child(odd) .card__number-wrapper {
+  background: linear-gradient(to right, hsl(0, 0%, 15%), transparent);
+}
 .card:nth-child(even) {
   background: white;
   color: var(--color-gray-alternate);
+  border: 1px solid #DFEAF2;
 }
 .card:nth-child(even) .card__balance,
 .card:nth-child(even) .card__cardholder,
 .card:nth-child(even) .card__valid,
 .card:nth-child(even) .card__number {
   color: var(--color-dark-blue);
+}
+.card:nth-child(even)::after {
+  background: url("../media/icons/card-chip-dark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card:nth-child(even) .card__number-wrapper {
+  border-top: 1px solid #DFEAF2;
 }
 .card__info {
   display: grid;
@@ -407,6 +436,14 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  background: transparent;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-block: min(20px, 1.3889vw);
+  padding-inline: min(15px, 1.0417vw);
+  width: 100%;
+  border-radius: 0px 0px min(25px, 1.7361vw) min(25px, 1.7361vw);
 }
 .card__company {
   width: 3.0556vw;
@@ -433,12 +470,14 @@ input::placeholder {
   display: flex;
   -moz-column-gap: 2.0833vw;
        column-gap: 2.0833vw;
+  height: min(16.3194vw, 235px);
 }
 
 .transactions__body {
   padding: min(25px, 1.7361vw);
   width: 24.3056vw;
   max-width: 350px;
+  height: min(16.3194vw, 235px);
 }
 .transactions__item {
   display: flex;
@@ -485,4 +524,9 @@ input::placeholder {
 }
 .transactions__amount-positive {
   color: var(--color-green);
+}
+
+.activity__body {
+  padding: 28px 30px;
+  height: min(322px, 22.3611vw);
 }/*# sourceMappingURL=styles.css.map */
