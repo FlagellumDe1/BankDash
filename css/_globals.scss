@@ -19,6 +19,7 @@ body{
     font-size: min(1.1111,16px);
     background-color: var(--color-gray);
     color: var(--color-dark-blue);
+    user-select: none;
 }
 
 main{
@@ -30,12 +31,13 @@ main{
     }
     
     .main__wrapper{
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto;
         margin: 0 auto;
-        flex-wrap: wrap;
         max-width: 1440px;
-        gap: 2.0833vw;
+        column-gap: 2.0833vw;
         justify-content: center;
+        grid-template-rows: auto auto;
     }
 }
 

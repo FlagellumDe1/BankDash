@@ -5,11 +5,14 @@
         max-width: 350px;
         height: min(16.3194vw, 235px);
     }
-
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: min(10px, 0.6944vw);
+    }
     &__item{
         display: flex;
         gap: 1em;
-        margin-bottom: 10px;
         align-items: center;
         position: relative;
     }

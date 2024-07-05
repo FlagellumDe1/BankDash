@@ -45,6 +45,9 @@ body {
   font-size: 1.1111;
   background-color: var(--color-gray);
   color: var(--color-dark-blue);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 main {
@@ -57,12 +60,14 @@ main {
   }
 }
 main .main__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   margin: 0 auto;
-  flex-wrap: wrap;
   max-width: 1440px;
-  gap: 2.0833vw;
+  -moz-column-gap: 2.0833vw;
+       column-gap: 2.0833vw;
   justify-content: center;
+  grid-template-rows: auto auto;
 }
 
 .container {
@@ -309,6 +314,10 @@ input::placeholder {
   width: 50.6944vw;
   max-width: 730px;
 }
+.element_small {
+  width: 24.3056vw;
+  max-width: 350px;
+}
 .element__header {
   display: flex;
   justify-content: space-between;
@@ -316,6 +325,7 @@ input::placeholder {
 .element__title {
   font-weight: 600;
   font-size: min(22px, 1.5278vw);
+  text-transform: capitalize;
 }
 .element__body {
   background: white;
@@ -325,7 +335,12 @@ input::placeholder {
 .element__body_transparent {
   background: inherit;
 }
-.element__chart {
+.element_chart {
+  padding: 28px 30px;
+  display: flex;
+  justify-content: center;
+}
+.element_constant-height {
   min-height: 261px;
 }
 
@@ -479,10 +494,14 @@ input::placeholder {
   max-width: 350px;
   height: min(16.3194vw, 235px);
 }
+.transactions__list {
+  display: flex;
+  flex-direction: column;
+  gap: min(10px, 0.6944vw);
+}
 .transactions__item {
   display: flex;
   gap: 1em;
-  margin-bottom: 10px;
   align-items: center;
   position: relative;
 }
@@ -529,4 +548,38 @@ input::placeholder {
 .activity__body {
   padding: 28px 30px;
   height: min(322px, 22.3611vw);
+}
+.activity__chart-container {
+  color: red !important;
+}
+
+.stock__body {
+  padding-block: 25px;
+  padding-inline: min(30px, 2.0833vw);
+}
+.stock__table {
+  width: 100%;
+  height: 100%;
+  font-size: min(16px, 1.1111vw);
+}
+.stock__table-head {
+  color: var(--color-gray-icons);
+  position: relative;
+  text-align: left;
+}
+.stock__table-head::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #F4F5F7;
+  position: absolute;
+}
+.stock__table-body {
+  text-transform: capitalize;
+}
+.stock__table-body-cell_positive-income {
+  color: var(--color-green);
+}
+.stock__table-body-cell_negative-income {
+  color: var(--color-red);
 }/*# sourceMappingURL=styles.css.map */

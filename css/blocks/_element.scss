@@ -11,6 +11,11 @@
         max-width: 730px;
     }
 
+    &_small{
+        width: 24.3056vw;
+        max-width: 350px;
+    }
+
     &__header{
         display: flex;
         justify-content: space-between;
@@ -19,6 +24,7 @@
     &__title{
         font-weight: 600;
         font-size: min(22px, 1.5278vw);
+        text-transform: capitalize;
     }
 
     &__body{
@@ -31,7 +37,13 @@
         }
     }
 
-    &__chart{
+    &_chart{
+        padding:  28px 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &_constant-height{
         min-height: 261px;
     }
 }

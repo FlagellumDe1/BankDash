@@ -388,12 +388,64 @@
             </section>
             <section class="activity element element_wide">
                 <div class="activity__header element__header">
-                    <h2 class="cards__title element__title">
+                    <h2 class="activity__title element__title">
                         Weekly activity
                     </h2>
                 </div>
-                <div class="activity__body element__body element__chart">
+                <div class="activity__body element__body element_chart element_constant-height">
                     <canvas class="activity__chart-container" id="activityChart"></canvas>
+                </div>
+            </section>
+            <section class="stock element element_small">
+                <div class="element__header stock__header">
+                    <h2 class="element__title stock__title">
+                        trending stock
+                    </h2>
+                </div>
+                <div class="element__body stock__body element_constant-height">
+                    <table class="stock__table">
+                        <thead class="stock__table-head">
+                            <tr class="stock__table-head-row">
+                                <th class="stock__table-header-cell">SL No</th>
+                                <th class="stock__table-header-cell">Name</th>
+                                <th class="stock__table-header-cell">Price</th>
+                                <th class="stock__table-header-cell">Return</th>
+                            </tr>
+                        </thead>
+                        <tbody class="stock__table-body">
+                            <tr class="stock__table-body-row">
+                                <td class="stock__table-body-cell">01.</td>
+                                <td class="stock__table-body-cell">trivago</td>
+                                <td class="stock__table-body-cell">$520</td>
+                                <td class="stock__table-body-cell stock__table-body-cell_positive-income">+5%</td>
+                            </tr>
+                            <tr class="stock__table-body-row">
+                                <td class="stock__table-body-cell">02.</td>
+                                <td class="stock__table-body-cell">canon</td>
+                                <td class="stock__table-body-cell">$480</td>
+                                <td class="stock__table-body-cell stock__table-body-cell_positive-income">+10%</td>
+                            </tr>
+                            <tr class="stock__table-body-row">
+                                <td class="stock__table-body-cell">03.</td>
+                                <td class="stock__table-body-cell">uber food</td>
+                                <td class="stock__table-body-cell">$350</td>
+                                <td class="stock__table-body-cell stock__table-body-cell_negative-income">-3%</td>
+                            </tr>
+                            <tr class="stock__table-body-row">
+                                <td class="stock__table-body-cell">04.</td>
+                                <td class="stock__table-body-cell">nokia</td>
+                                <td class="stock__table-body-cell">$920</td>
+                                <td class="stock__table-body-cell stock__table-body-cell_positive-income">+2%</td>
+                            </tr>
+                            <tr class="stock__table-body-row">
+                                <td class="stock__table-body-cell">05.</td>
+                                <td class="stock__table-body-cell">tiktok</td>
+                                <td class="stock__table-body-cell">$670</td>
+                                <td class="stock__table-body-cell stock__table-body-cell_negative-income">-12%</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
                 </div>
             </section>
         </div>

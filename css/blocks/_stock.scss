@@ -1,0 +1,40 @@
+.stock{
+    &__body{
+        padding-block: 25px;
+        padding-inline: min(30px, 2.0833vw);
+    }
+    &__table{
+        width: 100%;
+        height: 100%;
+        font-size: min(16px, 1.1111vw);
+
+        
+        &-head{
+            color: var(--color-gray-icons);
+            position: relative;
+            text-align: left;
+            
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background: #F4F5F7;
+                    position: absolute;
+                }
+        }
+
+        &-body{
+            text-transform: capitalize;
+
+            &-cell{
+                &_positive-income{
+                    color: var(--color-green);
+                }
+
+                &_negative-income{
+                    color: var(--color-red)
+                }
+            }
+        }
+    }
+}

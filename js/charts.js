@@ -13,14 +13,15 @@ function adaptiveSizeCalculator(designElementSize, designWidth, maxElementSize, 
     return deviceWidth * ratio
 }
 
-function chartResize(container, height){
-    let newAspectRatio = (container.parentNode.width / height) +1;
-    console.log(`Aspect ratio:${newAspectRatio}`);
-    console.log(container.parentNode)
+function chartResize(container){
+    let newAspectRatio = (container.parentNode.width / container.height) + 100;
     return newAspectRatio
 }
 
 //ACTIVITIES CHART
+Chart.defaults.color = '#718EBF';
+Chart.defaults.font.size = adaptiveSizeCalculator(13, 1440, 13, 10);
+Chart.defaults.font.family = 'Inter';
 
 const ctx = document.getElementById('activityChart');
 let activityChart = new Chart(ctx, {
@@ -68,10 +69,20 @@ let activityChart = new Chart(ctx, {
         ]
     },
     options: {
-
         scales: {
             y: {
                 beginAtZero: true,
+            },
+        },
+        plugins: {
+            legend: {
+                position: 'top',
+                align: 'end',
+                labels:{
+                    color: '#718EBF',
+                    boxWidth: 15,
+                    boxHeight: 15,
+                }
             },
         }
     },
@@ -79,13 +90,10 @@ let activityChart = new Chart(ctx, {
 
 for (let dataset of activityChart.data.datasets) {
     dataset.barPercentage = 0.5;
-    console.log(dataset.barThickness);
 }
 
-Chart.defaults.font.size = adaptiveSizeCalculator(13, 1440, 13, 10);
-Chart.defaults.font.family = 'Inter';
-Chart.defaults.color = '#718EBF';
 
-activityChart.options.aspectRatio = chartResize(ctx, 322);
 
-console.log(Chart.defaults.font.size)
+console.log(activityChart)
+
+activityChart.options.aspectRatio = chartResize(ctx);
