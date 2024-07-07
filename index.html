@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>BankDash</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
     <aside class="navigation">
@@ -392,7 +393,7 @@
                         Weekly activity
                     </h2>
                 </div>
-                <div class="activity__body element__body element_chart element_constant-height">
+                <div class="activity__body element__body element_chart">
                     <canvas class="activity__chart-container" id="activityChart"></canvas>
                 </div>
             </section>
@@ -402,7 +403,7 @@
                         trending stock
                     </h2>
                 </div>
-                <div class="element__body stock__body element_constant-height">
+                <div class="element__body stock__body">
                     <table class="stock__table">
                         <thead class="stock__table-head">
                             <tr class="stock__table-head-row">
@@ -448,14 +449,64 @@
                     </table>
                 </div>
             </section>
+            <section class="balance element element_wide">
+                <div class="element__header balance__header">
+                    <h2 class="element__title balance__title">
+                        balance history
+                    </h2>
+                </div>
+                <div class="balance__body element__body element_chart">
+                    <canvas class="balance__chart-container" id="balanceChart"></canvas>
+                </div>
+            </section>
+            <section class="transfer element element_small">
+                <div class="element__header transfer__header">
+                    <h2 class="element__title tranfer__title">
+                        quick transfer
+                    </h2>
+                </div>
+                <div class="element__body transfer__body">
+                    <div class="transfer__recipient-swiper">
+                        <ul class="transfer__recipient-list swiper-wrapper">
+                            <li class="transfer__recipient-item swiper-slide">
+                                <img src="./media/recipient2.png" alt="Randy Press's photo" class="transfer__recipient-avatar">
+                                <span class="transfer__recipient-name">
+                                    Randy Press
+                                </span>
+                                <span class="transfer__recipient-position">
+                                    Director
+                                </span>
+                        
+                            </li>
+                            <li class="transfer__recipient-item swiper-slide">
+                                <img src="./media/recipient3.png" alt="John Collins's photo" class="transfer__recipient-avatar">
+                                <span class="transfer__recipient-name">
+                                    john collins
+                                </span>
+                                <span class="transfer__recipient-position">Designer</span>
+                            </li>
+                            <li class="transfer__recipient-item swiper-slide">
+                                <img src="./media/recipient4.jpg" alt="KKS Xerx's photo" class="transfer__recipient-avatar">
+                                <span class="transfer__recipient-name">
+                                    Kks Xerx
+                                </span>
+                                <span class="transfer__recipient-position">developer</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <form action="" class="transfer__form">
+                        <input type="number" class="transfer__form-field" name="transferField" placeholder="Write Amount">
+                        <button class="transfer__form-button">
+                            Send
+                        </button>
+                    </form>
+                    </div>
+            </section>
         </div>
     </main>
-
-
-
-   
 </body>
 
 <script src="./js/charts.js"></script>
 <script src="./js/card-masker.js"></script>
+
 </html>

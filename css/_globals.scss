@@ -36,8 +36,9 @@ main{
         margin: 0 auto;
         max-width: 1440px;
         column-gap: 2.0833vw;
+        row-gap: min(24px, 1.6667vw);
         justify-content: center;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto auto auto;
     }
 }
 

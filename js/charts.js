@@ -97,3 +97,40 @@ for (let dataset of activityChart.data.datasets) {
 console.log(activityChart)
 
 activityChart.options.aspectRatio = chartResize(ctx);
+
+
+//BALANCE CHART 
+
+const balanceContainer = document.getElementById('balanceChart');
+
+let balanceChart = new Chart(balanceContainer, {
+    type: 'line',
+    data: {
+        labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+        datasets: [{
+            data: [200, 400, 450, 300, 450, 700, 500],
+            borderWidth: 3,
+            backgroundColor: '#1814F3',
+            borderColor: '#1814F3',
+            fill: {
+                target: 'origin',
+                above: 'rgba(45, 96, 255, 0.5)'
+            },
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            pointHitRadius: 20,
+            tension: 0.3
+
+
+        }]
+    },
+    options: {
+        plugins:{
+            legend:{
+                display: false
+            }
+        }
+    }
+});
+
+balanceChart.options.aspectRatio = chartResize(balanceContainer)
